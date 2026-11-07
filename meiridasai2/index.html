@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>每日大赛主题大赛寸止挑战-挑战规则_往期作品_参赛指南</title>
+<meta name="description" content="每日大赛主题大赛寸止挑战是聚焦创意耐力与主题表达的线上挑战赛事，本页汇总每日大赛主题大赛寸止挑战的规则解读、热门作品、往期回顾与参赛指南，帮助新老选手快速了解赛制并找到值得围观的精彩内容。">
+<meta name="keywords" content="每日大赛主题大赛寸止挑战,寸止挑战规则,每日大赛主题赛,寸止挑战作品,创意耐力赛事">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#f7f4ef;
+  --paper:#ffffff;
+  --ink:#1f1d1a;
+  --ink-soft:#4a453f;
+  --muted:#7a746d;
+  --line:#e3ddd4;
+  --accent:#b85c38;
+  --accent-soft:#f3e4dc;
+  --accent-deep:#8a3f22;
+  --gold:#c99a4b;
+  --shadow:0 6px 20px rgba(40,30,20,.06);
+  --shadow-hover:0 12px 28px rgba(40,30,20,.12);
+  --radius:14px;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --serif:"Songti SC","SimSun","Noto Serif SC",serif;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
+.section{padding:56px 0;}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:28px;border-bottom:2px solid var(--line);padding-bottom:14px;}
+.section-head h2{font-family:var(--serif);font-size:clamp(22px,3vw,30px);letter-spacing:.02em;color:var(--ink);position:relative;}
+.section-head h2::after{content:"";position:absolute;left:0;bottom:-16px;width:56px;height:3px;background:var(--accent);border-radius:2px;}
+.section-head .sub{font-size:13px;color:var(--muted);letter-spacing:.05em;}
+
+/* 顶部导航 */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(247,244,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.04em;color:var(--ink);white-space:nowrap;}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:800;box-shadow:0 3px 10px rgba(184,92,56,.35);}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;}
+.nav-links a{padding:7px 13px;font-size:14px;color:var(--ink-soft);border-radius:20px;transition:.2s;white-space:nowrap;}
+.nav-links a:hover{background:var(--accent-soft);color:var(--accent-deep);}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:18px;color:var(--ink);cursor:pointer;}
+
+/* Banner */
+.masthead{background:linear-gradient(150deg,#2b211a 0%,#3d2c22 48%,#5a3d2a 100%);color:#f6efe6;position:relative;overflow:hidden;}
+.masthead::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(201,154,75,.28),transparent 55%),radial-gradient(circle at 8% 85%,rgba(184,92,56,.22),transparent 50%);}
+.masthead-inner{position:relative;padding:64px 0 56px;display:grid;grid-template-columns:1.18fr .82fr;gap:44px;align-items:center;}
+.masthead .kicker{display:inline-block;font-size:12px;letter-spacing:.24em;color:var(--gold);border:1px solid rgba(201,154,75,.45);padding:5px 12px;border-radius:30px;margin-bottom:18px;}
+.masthead h1{font-family:var(--serif);font-size:clamp(28px,4.2vw,44px);line-height:1.28;letter-spacing:.02em;margin-bottom:18px;}
+.masthead h1 em{font-style:normal;color:var(--gold);}
+.masthead p.lead{font-size:15px;color:#d8ccc0;max-width:560px;margin-bottom:12px;}
+.searchbar{display:flex;margin:24px 0 26px;max-width:520px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:40px;padding:5px 5px 5px 20px;backdrop-filter:blur(4px);}
+.searchbar input{flex:1;background:none;border:none;outline:none;color:#f6efe6;font-size:14px;}
+.searchbar input::placeholder{color:#b6a898;}
+.searchbar button{background:var(--gold);color:#2b211a;border:none;border-radius:30px;padding:9px 22px;font-size:14px;font-weight:700;cursor:pointer;transition:.2s;}
+.searchbar button:hover{background:#d8ad63;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;}
+.hero-tags a{font-size:13px;padding:7px 15px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e9ded2;transition:.2s;}
+.hero-tags a:hover{background:var(--gold);color:#2b211a;border-color:var(--gold);}
+.hero-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;backdrop-filter:blur(6px);}
+.hero-panel h3{font-size:13px;letter-spacing:.16em;color:var(--gold);margin-bottom:14px;font-weight:600;}
+.hero-panel li{display:flex;justify-content:space-between;font-size:13.5px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.12);color:#ddd2c6;}
+.hero-panel li:last-child{border-bottom:none;}
+.hero-panel li span:last-child{color:var(--gold);font-variant-numeric:tabular-nums;}
+
+/* 简介 */
+.intro-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:start;}
+.intro-text p{font-size:15.5px;color:var(--ink-soft);margin-bottom:16px;}
+.intro-text strong{color:var(--accent-deep);font-weight:600;}
+.intro-aside{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);}
+.intro-aside h4{font-family:var(--serif);font-size:17px;margin-bottom:14px;color:var(--ink);}
+.intro-aside li{font-size:13.5px;color:var(--muted);padding:8px 0;border-bottom:1px dotted var(--line);display:flex;justify-content:space-between;gap:10px;}
+.intro-aside li:last-child{border-bottom:none;}
+.intro-aside li b{color:var(--accent);font-weight:600;}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:22px;}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
+.card .cover{height:118px;background:linear-gradient(135deg,var(--accent-soft),#efe6da);position:relative;display:flex;align-items:center;justify-content:center;color:var(--accent-deep);font-family:var(--serif);font-size:15px;letter-spacing:.08em;padding:0 16px;text-align:center;border-bottom:1px solid var(--line);}
+.card .cover .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:11px;padding:3px 9px;border-radius:20px;letter-spacing:.04em;}
+.card .body{padding:16px 17px 18px;display:flex;flex-direction:column;flex:1;}
+.card h3{font-size:16px;line-height:1.45;margin-bottom:8px;color:var(--ink);font-weight:600;}
+.card .desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:12px;flex:1;}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.tag{font-size:11.5px;padding:3px 9px;border-radius:20px;background:#f2ece2;color:#7a5c3e;letter-spacing:.02em;}
+.card .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;}
+.card .foot .score{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;}
+
+/* 更新列表 */
+.update-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.update-item{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;transition:.2s;}
+.update-item:hover{box-shadow:var(--shadow);}
+.update-item .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none;}
+.update-item .txt h4{font-size:14.5px;font-weight:600;margin-bottom:3px;color:var(--ink);}
+.update-item .txt p{font-size:12.5px;color:var(--muted);line-height:1.6;}
+.update-item .txt time{font-size:11.5px;color:#a89c8d;display:block;margin-top:4px;letter-spacing:.03em;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;}
+.cat-chip{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center;transition:.2s;cursor:default;}
+.cat-chip:hover{border-color:var(--accent);background:var(--accent-soft);}
+.cat-chip .ico{font-size:20px;margin-bottom:6px;display:block;}
+.cat-chip span{font-size:13.5px;color:var(--ink-soft);}
+.cat-chip small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;}
+
+/* 深度正文 */
+.article-body{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:34px 38px;box-shadow:var(--shadow);}
+.article-body h3{font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--ink);}
+.article-body h3:first-child{margin-top:0;}
+.article-body p{font-size:15.2px;color:var(--ink-soft);margin-bottom:14px;text-align:justify;}
+.article-body p strong{color:var(--accent-deep);font-weight:600;}
+.article-body .pull{margin:22px 0;padding:16px 22px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;font-size:14.5px;color:var(--accent-deep);}
+.article-body ul{margin:6px 0 16px 2px;}
+.article-body li{font-size:14.6px;color:var(--ink-soft);padding-left:18px;position:relative;margin-bottom:8px;}
+.article-body li::before{content:"·";position:absolute;left:2px;color:var(--accent);font-weight:800;}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;}
+.faq-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;transition:.2s;}
+.faq-card:hover{box-shadow:var(--shadow);}
+.faq-card h4{font-size:15.5px;color:var(--ink);margin-bottom:10px;font-weight:600;position:relative;padding-left:22px;}
+.faq-card h4::before{content:"Q";position:absolute;left:0;top:0;width:17px;height:17px;line-height:17px;text-align:center;background:var(--accent);color:#fff;border-radius:5px;font-size:11px;font-weight:800;}
+.faq-card p{font-size:13.6px;color:var(--muted);line-height:1.75;}
+
+/* 评论 */
+.comment-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.comment{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+.comment .c-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.comment .avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--accent-soft),#e2d3c2);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--accent-deep);font-weight:700;flex:none;}
+.comment .c-head b{font-size:13.5px;color:var(--ink);font-weight:600;}
+.comment .c-head time{font-size:11.5px;color:#a89c8d;margin-left:auto;}
+.comment p{font-size:13.4px;color:var(--ink-soft);line-height:1.7;}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;}
+.news-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;transition:.2s;display:flex;flex-direction:column;}
+.news-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);}
+.news-card time{font-size:12px;color:var(--gold);letter-spacing:.05em;margin-bottom:8px;}
+.news-card h4{font-size:15.5px;line-height:1.5;margin-bottom:8px;color:var(--ink);}
+.news-card p{font-size:13.2px;color:var(--muted);line-height:1.68;flex:1;}
+
+/* 页脚 */
+footer{background:#2b211a;color:#c7b9ab;padding:48px 0 26px;margin-top:20px;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px;}
+.foot-grid h5{font-size:13px;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;font-weight:600;}
+.foot-grid p{font-size:13px;line-height:1.8;color:#a99c8d;}
+.foot-grid a{display:block;font-size:13px;color:#c7b9ab;padding:4px 0;transition:.2s;}
+.foot-grid a:hover{color:var(--gold);}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8f8377;}
+@media(max-width:900px){
+  .masthead-inner{grid-template-columns:1fr;gap:30px;padding:44px 0 40px;}
+  .intro-grid{grid-template-columns:1fr;gap:24px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 16px;flex-direction:column;gap:2px;box-shadow:var(--shadow);}
+  .nav-links.open{display:flex;}
+  .nav-toggle{display:block;}
+  .article-body{padding:24px 20px;}
+}
+@media(max-width:560px){
+  .section{padding:38px 0;}
+  .card-grid{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .comment-list{grid-template-columns:1fr;}
+  .news-grid{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr;}
+  .searchbar{flex-direction:column;padding:12px;border-radius:16px;gap:8px;}
+  .searchbar input{padding:6px 4px;}
+  .searchbar button{width:100%;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="topbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/#top"><span class="mark">寸</span>每日大赛 · 主题赛寸止挑战</a>
+    <button class="nav-toggle" aria-label="展开导航" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links">
+      <a href="/#intro">赛事简介</a>
+      <a href="/#hot">热门作品</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#category">分类导航</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">社区评论</a>
+      <a href="/#news">赛事资讯</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Banner -->
+<section class="masthead" id="top">
+  <div class="wrap masthead-inner">
+    <div>
+      <span class="kicker">DAILY THEME · 寸止 CHALLENGE</span>
+      <h1>每日大赛主题大赛寸止挑战<br><em>聚焦耐力、创意与临场表达</em></h1>
+      <p class="lead">每日大赛主题大赛寸止挑战是一档围绕主题创作与节奏控制展开的线上挑战赛事，强调在限定时间内完成高完成度表达。</p>
+      <p class="lead">本站汇总赛事规则、往期精选、参赛入口与社区讨论，帮你快速找到值得围观的场次与作品。</p>
+      <form class="searchbar" onsubmit="return false;">
+        <input type="search" placeholder="搜索作品、选手或挑战主题…">
+        <button type="button">查找赛事</button>
+      </form>
+      <div class="hero-tags">
+        <a href="/#hot">今日主题</a>
+        <a href="/#updates">最新榜单</a>
+        <a href="/#category">新人入门</a>
+        <a href="/#deep">规则解析</a>
+        <a href="/#faq">参赛答疑</a>
+        <a href="/#comments">选手讨论</a>
+        <a href="/#news">赛程日历</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <h3>赛事速览 · 2026.11.07</h3>
+      <ul>
+        <li><span>今日参赛作品</span><span>1,284 件</span></li>
+        <li><span>主题完成率</span><span>76.3%</span></li>
+        <li><span>围观人次</span><span>48,902</span></li>
+        <li><span>平均挑战时长</span><span>9 分 42 秒</span></li>
+        <li><span>本周新晋选手</span><span>217 位</span></li>
+        <li><span>下一主题公布</span><span>今晚 21:00</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="section" id="intro">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>关于每日大赛主题大赛寸止挑战</h2>
+      <span class="sub">读懂赛制，再决定围观还是上场</span>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p><strong>每日大赛主题大赛寸止挑战</strong>的核心，是“主题先行、寸止控场”。每期赛事会抛出一个限定主题，选手需要在规定时间内完成一段表达，难点不在于堆时长，而在于节奏中的收与放。寸止挑战强调在关键节点保持克制，让内容在抵达高潮前形成有效停顿，这种设计让作品天然带有讨论空间。</p>
+        <p>对普通观众来说，这个页面解决的是“从哪看起”的问题：今日主题是什么、哪些作品值得优先点开、往期高口碑场次如何补看。对准备参赛的人来说，这里则提供了规则拆解、常见失分点、主题适配思路与社区反馈，能帮你少走一些弯路。</p>
+        <p>我们整理了<strong>每日大赛主题大赛寸止挑战</strong>的热门作品榜、最新动态、分类入口与深度解析，所有内容围绕主题赛的观看体验与参赛体验展开。页面结构按“先看简介、再看作品、最后看规则与讨论”的顺序组织，方便你在不同阶段快速跳转。</p>
+        <p>无论你是这类挑战赛的老观众，还是第一次接触寸止概念的新人，都可以从本页找到适合自己的入口。如果你只想轻松围观，直接进入热门作品与最新动态即可；如果你想认真研究赛制，深度解析与 FAQ 会更适合你。收藏本页，也方便在每晚新主题公布后回来对照查看。</p>
+      </div>
+      <aside class="intro-aside">
+        <h4>本页可查内容</h4>
+        <ul>
+          <li><span>赛事规则与主题逻辑</span><b>5 节</b></li>
+          <li><span>往期精选作品</span><b>12 条</b></li>
+          <li><span>常见问题答疑</span><b>6 组</b></li>
+          <li><span>选手与观众评论</span><b>18 条</b></li>
+          <li><span>相关赛事资讯</span><b>6 条</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 热门作品 -->
+<section class="section" id="hot">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>热门作品与高口碑场次</h2>
+      <span class="sub">按围观热度与完成度综合整理</span>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="cover"><span class="badge">今日主题</span>「逆光收束」</div>
+        <div class="body">
+          <h3>逆光收束 · 第 47 期主题场</h3>
+          <div class="meta"><span class="tag">寸止挑战</span><span class="tag">主题赛</span><span class="tag">高完成度</span></div>
+          <p class="desc">选手在情绪最高点突然收力，用 3 秒静默完成主题扣题，被评论区称为“教科书级寸止”。</p>
+          <div class="foot"><span>围观 6.2k</span><span class="score">9.4 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">往期精选</span>「错位节拍」</div>
+        <div class="body">
+          <h3>错位节拍 · 节奏控制专题</h3>
+          <div class="meta"><span class="tag">节奏</span><span class="tag">创意</span><span class="tag">进阶</span></div>
+          <p class="desc">整段表达刻意与背景节奏错开半拍，收尾时重新对齐，适合研究寸止手法的进阶观众。</p>
+          <div class="foot"><span>围观 4.8k</span><span class="score">9.1 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">新人友好</span>「三分钟主题」</div>
+        <div class="body">
+          <h3>三分钟主题速通 · 新人场</h3>
+          <div class="meta"><span class="tag">入门</span><span class="tag">短时长</span><span class="tag">易理解</span></div>
+          <p class="desc">时长压缩到三分钟，规则门槛低，适合第一次接触每日大赛主题大赛寸止挑战的观众。</p>
+          <div class="foot"><span>围观 3.5k</span><span class="score">8.6 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">讨论度高</span>「静默三十秒」</div>
+        <div class="body">
+          <h3>静默三十秒 · 争议与好评并存</h3>
+          <div class="meta"><span class="tag">寸止</span><span class="tag">争议</span><span class="tag">实验性</span></div>
+          <p class="desc">用长时间停顿挑战观众耐心，评分两极分化，但确实是理解寸止理念的典型案例。</p>
+          <div class="foot"><span>围观 5.1k</span><span class="score">8.2 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">主题高分</span>「双线并行」</div>
+        <div class="body">
+          <h3>双线并行 · 主题赛高分场</h3>
+          <div class="meta"><span class="tag">结构</span><span class="tag">叙事</span><span class="tag">推荐</span></div>
+          <p class="desc">两条线索在最后十秒交汇，寸止点落在交汇瞬间，结构完整度在当期排名第一。</p>
+          <div class="foot"><span>围观 4.4k</span><span class="score">9.3 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">轻松向</span>「日常碎片」</div>
+        <div class="body">
+          <h3>日常碎片 · 轻量围观推荐</h3>
+          <div class="meta"><span class="tag">生活化</span><span class="tag">轻量</span><span class="tag">下饭</span></div>
+          <p class="desc">主题贴近日常，不需要太多背景知识，适合通勤或休息时随手点开。</p>
+          <div class="foot"><span>围观 2.9k</span><span class="score">8.4 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">技术流</span>「一镜到底」</div>
+        <div class="body">
+          <h3>一镜到底 · 技术流挑战</h3>
+          <div class="meta"><span class="tag">技术</span><span class="tag">长镜头</span><span class="tag">难度高</span></div>
+          <p class="desc">全程无切换，对节奏和体力要求都高，是每日大赛主题大赛寸止挑战里难度偏上的类型。</p>
+          <div class="foot"><span>围观 3.8k</span><span class="score">8.9 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">情感向</span>「留白时刻」</div>
+        <div class="body">
+          <h3>留白时刻 · 情感表达专场</h3>
+          <div class="meta"><span class="tag">情感</span><span class="tag">留白</span><span class="tag">共鸣</span></div>
+          <p class="desc">把寸止处理成情绪留白，评论里不少人说“停的那一下比说出来的更打动人”。</p>
+          <div class="foot"><span>围观 4.1k</span><span class="score">9.0 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">主题延展</span>「反向寸止」</div>
+        <div class="body">
+          <h3>反向寸止 · 规则边界实验</h3>
+          <div class="meta"><span class="tag">实验</span><span class="tag">规则</span><span class="tag">进阶</span></div>
+          <p class="desc">把停顿放在开头而非结尾，挑战对“寸止”定义的常规理解，适合喜欢规则讨论的观众。</p>
+          <div class="foot"><span>围观 3.2k</span><span class="score">8.7 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">回顾场</span>「年度精选」</div>
+        <div class="body">
+          <h3>年度精选 · 十期高光回顾</h3>
+          <div class="meta"><span class="tag">合集</span><span class="tag">回顾</span><span class="tag">补看</span></div>
+          <p class="desc">把一年内讨论度最高的十个寸止瞬间剪在一起，是快速了解赛事风格的入口。</p>
+          <div class="foot"><span>围观 7.6k</span><span class="score">9.5 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">主题赛</span>「声画分离」</div>
+        <div class="body">
+          <h3>声画分离 · 视听向主题场</h3>
+          <div class="meta"><span class="tag">视听</span><span class="tag">剪辑</span><span class="tag">创意</span></div>
+          <p class="desc">声音与画面刻意不同步，靠最后几秒重新咬合完成收束，剪辑感很强。</p>
+          <div class="foot"><span>围观 2.7k</span><span class="score">8.8 分</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><span class="badge">新人场</span>「第一次上场」</div>
+        <div class="body">
+          <h3>第一次上场 · 新人记录</h3>
+          <div class="meta"><span class="tag">新人</span><span class="tag">记录</span><span class="tag">成长</span></div>
+          <p class="desc">记录一位新人从报名到完成第一次寸止挑战的全过程，适合准备入坑的人参考。</p>
+          <div class="foot"><span>围观 2.3k</span><span class="score">8.1 分</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="updates">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>最新更新与今日动态</h2>
+      <span class="sub">2026 年 11 月 7 日更新</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>「逆光收束」主题场作品陆续上线</h4><p>第 47 期主题赛投稿已开放，当前已有 312 件作品进入展示页。</p><time>2026-11-07 09:20</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>今晚 21:00 公布下一期主题</h4><p>官方账号将同步直播拆题，适合准备参赛的选手提前蹲守。</p><time>2026-11-07 11:05</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>新人场规则微调说明</h4><p>三分钟主题速通场次延长了 30 秒准备时间，降低入门门槛。</p><time>2026-11-07 13:40</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>「静默三十秒」进入争议榜前三</h4><p>该作品因长时间停顿引发大量讨论，评分两极分化明显。</p><time>2026-11-06 20:15</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>年度精选合集播放量破七万</h4><p>十期高光回顾合集成为新观众补看每日大赛主题大赛寸止挑战的主要入口。</p><time>2026-11-06 16:48</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>主题赛作品提交格式更新</h4><p>新增封面规范与时长标注要求，参赛前请先核对提交说明。</p><time>2026-11-05 18:30</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>社区投票功能上线</h4><p>观众可为当期作品投票，票数将作为人气分参考项之一。</p><time>2026-11-05 10:12</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>「错位节拍」被收录进进阶案例库</h4><p>该作品将作为节奏控制专题的示范案例长期展示。</p><time>2026-11-04 21:00</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>本周新晋选手突破两百位</h4><p>新人场报名人数持续上升，赛事方表示会适当增加展示位。</p><time>2026-11-04 14:26</time></div></div>
+      <div class="update-item"><span class="dot"></span><div class="txt"><h4>主题赛评论区开放长评功能</h4><p>观众可以发布更长篇幅的作品分析，优质长评会在页面内展示。</p><time>2026-11-03 19:55</time></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="category">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>按需求进入不同分类</h2>
+      <span class="sub">从围观到参赛，各有入口</span>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-chip"><span class="ico">🎯</span><span>今日主题场</span><small>当期挑战</small></div>
+      <div class="cat-chip"><span class="ico">🏆</span><span>高分作品榜</span><small>综合评分</small></div>
+      <div class="cat-chip"><span class="ico">🌱</span><span>新人友好场</span><small>入门首选</small></div>
+      <div class="cat-chip"><span class="ico">🧠</span><span>规则解析区</span><small>赛制说明</small></div>
+      <div class="cat-chip"><span class="ico">🔥</span><span>争议讨论场</span><small>观点碰撞</small></div>
+      <div class="cat-chip"><span class="ico">📅</span><span>往期回顾</span><small>补看合集</small></div>
+      <div class="cat-chip"><span class="ico">🎬</span><span>技术流专场</span><small>进阶手法</small></div>
+      <div class="cat-chip"><span class="ico">💬</span><span>社区评论区</span><small>选手互动</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="deep">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>深度解析：寸止挑战到底在挑战什么</h2>
+      <span class="sub">从赛制逻辑到观看方式</span>
+    </div>
+    <div class="article-body">
+      <h3>一、主题赛与寸止机制的关系</h3>
+      <p>每日大赛主题大赛寸止挑战并不是单纯的“比谁更久”或“比谁更敢”，它的核心在于<strong>主题限定下的节奏控制</strong>。每期主题公布后，选手需要判断哪些内容必须表达、哪些内容可以留白。寸止之所以成为赛事的标志性机制，是因为它强制选手在表达最饱满的节点做出取舍，这种取舍本身就是评分的重要依据。</p>
+      <p>从观看角度看，理解这一点很关键。很多第一次接触的观众会误以为停顿是失误或卡顿，实际上那往往是选手刻意设计的收束点。当你能识别出“收在哪里、为什么收”，观看体验会明显不同。</p>
+      <h3>二、作品吸引点通常落在哪里</h3>
+      <p>高口碑作品一般具备三个共性：<strong>主题扣题明确、节奏有起伏、寸止点有理由</strong>。扣题明确意味着观众不需要额外背景知识就能理解作品想表达什么；节奏起伏让观看过程不疲劳；寸止点有理由则决定了作品是“设计”还是“硬停”。在每日大赛主题大赛寸止挑战里，硬停的作品往往评分不高，因为观众能感觉到停顿与内容之间缺乏必然联系。</p>
+      <div class="pull">一句话总结：好的寸止不是把内容截断，而是让停顿成为内容的一部分。</div>
+      <h3>三、选手差异与常见失分点</h3>
+      <p>从往期作品看，选手大致可以分成几类：结构型选手擅长规划节奏，前期铺垫充分、收尾干净；情绪型选手依赖临场状态，上限高但稳定性一般；技术型选手在镜头、剪辑、声音处理上更讲究，但有时会忽略主题本身。三类选手在主题赛中的表现差异，是社区讨论的主要话题之一。</p>
+      <p>常见失分点集中在三个地方：一是寸止点过早，内容还没展开就收；二是停顿缺乏铺垫，观众无法理解为什么停在这里；三是主题理解偏差，作品完成度不低但明显跑题。准备参赛的人可以对照这三点自查，通常比盲目增加练习时长更有效。</p>
+      <h3>四、适合什么人看，适合什么人上场</h3>
+      <p>围观层面，<strong>每日大赛主题大赛寸止挑战</strong>适合喜欢看创意表达、节奏设计和临场应变的人。作品时长普遍不长，单件作品观看成本低，适合碎片时间浏览。参赛层面，它更适合对节奏敏感、愿意在结构上下功夫的人，而不是单纯追求刺激或时长的选手。</p>
+      <p>如果你还在犹豫是否上场，建议先连续看三到五期主题场，观察不同选手如何处理同一个主题。这个过程能帮你判断自己更接近哪种类型，也能让你在真正参赛前对评分标准有更直观的感受。想快速补看的话，往期回顾与年度精选合集是效率最高的入口。</p>
+      <ul>
+        <li>先看规则，再看作品，理解成本更低；</li>
+        <li>优先看高分场，建立对“好寸止”的判断标准；</li>
+        <li>争议作品同样值得看，能帮你理解规则边界；</li>
+        <li>准备参赛前，至少完整拆解一期主题。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="section" id="guide">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>浏览与围观体验指南</h2>
+      <span class="sub">怎么用这个页面更顺手</span>
+    </div>
+    <div class="article-body">
+      <p>本页按“了解赛事—挑选作品—查看规则—参与讨论”的路径组织，顶部导航可以直接跳到对应板块。如果你时间有限，建议从热门作品和最新动态两个板块入手，它们更新最频繁，也最能反映当期赛事的真实状态。</p>
+      <p>分类入口按需求划分，而不是按时间堆叠，这样可以减少在大量作品中反复滚动的时间。移动端下卡片会自动收为单列，评论与 FAQ 也做了可读性适配，适合在通勤或休息时浏览。页面内所有站内跳转都指向本页对应板块，方便你随时回到想看的区域。</p>
+      <p>如果你准备长期关注每日大赛主题大赛寸止挑战，建议收藏本页，并在每晚主题公布后回来对照最新动态。往期作品与深度解析适合在周末集中补看，评论区和资讯流则适合每天花几分钟扫一眼，了解当期讨论焦点。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>常见问题答疑</h2>
+      <span class="sub">新观众与参赛选手都常问的 6 个问题</span>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <h4>每日大赛主题大赛寸止挑战具体比的是什么？</h4>
+        <p>比的是在限定主题下完成一段表达，并在关键节点做出有理由的停顿。评分通常综合主题扣题、结构完整度、寸止点合理性以及整体完成度，不是单纯比时长或刺激程度。</p>
+      </div>
+      <div class="faq-card">
+        <h4>第一次看应该从哪些作品开始？</h4>
+        <p>建议从新人友好场和年度精选合集入手，前者门槛低、理解成本小，后者能快速建立对赛事风格的印象。看完再回到当期主题场，会更容易判断作品优劣。</p>
+      </div>
+      <div class="faq-card">
+        <h4>寸止点和普通停顿有什么区别？</h4>
+        <p>普通停顿更接近节奏上的自然间隙，寸止点则带有明确的设计意图，通常出现在情绪或信息最饱满的位置，用来制造收束感。判断标准是停顿时机与前后内容是否存在必然联系。</p>
+      </div>
+      <div class="faq-card">
+        <h4>准备参赛需要提前做哪些准备？</h4>
+        <p>先完整拆解一到两期同主题作品，理解评分偏好；再确认提交格式与时长要求；最后针对寸止点做单独练习，而不是只练整体时长。主题理解往往比技术细节更影响成绩。</p>
+      </div>
+      <div class="faq-card">
+        <h4>为什么有些高分作品看起来并不复杂？</h4>
+        <p>主题赛更看重表达是否准确、节奏是否成立，而不是复杂度堆叠。一件结构干净、扣题明确、寸止点合理的作品，评分常常高于技术炫技但主题模糊的作品。</p>
+      </div>
+      <div class="faq-card">
+        <h4>往期作品和当期作品应该怎么安排观看顺序？</h4>
+        <p>如果只想轻松围观，先看当期热门作品；如果想研究规则，建议按“新人场—高分场—争议场”的顺序补看。这样能先建立基础判断，再理解规则边界，最后形成自己的评价标准。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="section" id="comments">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>选手与观众在聊什么</h2>
+      <span class="sub">近 30 天社区评论摘选</span>
+    </div>
+    <div class="comment-list">
+      <div class="comment"><div class="c-head"><span class="avatar">阿</span><b>阿岚不熬夜</b><time>11-06</time></div><p>「逆光收束」那个收尾是真的稳，停的那一下我回看了三遍，情绪完全被带住了。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">慢</span><b>慢半拍选手</b><time>11-06</time></div><p>新人场延长准备时间之后友好多了，之前三十秒根本来不及想结构。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">K</span><b>Kite_041</b><time>11-05</time></div><p>「静默三十秒」我理解想表达的东西，但作为观众确实有点坐不住，评分两极不意外。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">木</span><b>木木三</b><time>11-05</time></div><p>错位节拍那件作品建议反复看，节奏错开再对齐的处理很见功底，属于越看越有味道的类型。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">七</span><b>七号围观席</b><time>11-04</time></div><p>每日大赛主题大赛寸止挑战的评论区比作品还好看，很多人分析得比我想得深。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">橘</span><b>橘子汽水</b><time>11-04</time></div><p>年度精选合集入坑的，一个晚上补完了十期高光，现在每天蹲主题公布。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">深</span><b>深海回音</b><time>11-03</time></div><p>有些作品停顿太刻意了，能感觉到是为了寸止而寸止，扣题但不好看。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">白</span><b>白噪音</b><time>11-03</time></div><p>技术流专场里的一镜到底太费体力了，佩服能全程稳住节奏的选手。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">小</span><b>小满未满</b><time>11-02</time></div><p>想知道下一期主题会不会偏情感向，最近几期技术流有点多了，想看点走心的。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">L</span><b>Lumen</b><time>11-02</time></div><p>留白时刻那件作品评论区氛围特别好，大家都在说自己的感受，很难得。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">南</span><b>南风知我意</b><time>11-01</time></div><p>新人第一次上场记录看哭了，谁不是从手忙脚乱开始的呢。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">一</span><b>一只咸鱼</b><time>11-01</time></div><p>投票功能上线之后感觉人气分权重有点高，希望别影响专业评分。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">星</span><b>星野拾光</b><time>10-31</time></div><p>双线并行那个交汇点绝了，十秒内两条线合到一起，结构控狂喜。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">陈</span><b>陈默的默</b><time>10-30</time></div><p>规则解析区写得挺清楚，之前一直没搞懂寸止和普通停顿的区别，现在明白了。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">兔</span><b>兔子洞</b><time>10-29</time></div><p>日常碎片那种轻松向的应该多一点，不是每次都有精力看高强度的作品。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">向</span><b>向日葵不低头</b><time>10-28</time></div><p>反向寸止那件作品挺大胆的，虽然不完全认同，但规则讨论价值很高。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">周</span><b>周末补番人</b><time>10-27</time></div><p>建议页面加一个“只看本期”的筛选，有时候不想翻往期作品。</p></div>
+      <div class="comment"><div class="c-head"><span class="avatar">空</span><b>空山新雨</b><time>10-26</time></div><p>声画分离那件的剪辑思路很值得学，声音先走画面后到，收尾重新咬合得很漂亮。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>赛事资讯与动态</h2>
+      <span class="sub">规则、赛程与社区变化</span>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <time>2026-11-07</time>
+        <h4>第 47 期「逆光收束」主题场投稿进行中</h4>
+        <p>本期主题强调收束感，官方提示选手注意寸止点与主题之间的呼应关系，提交前请核对时长与封面规范。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-06</time>
+        <h4>社区投票功能上线，人气分权重待观察</h4>
+        <p>观众可为当期作品投票，票数将作为人气分参考。赛事方表示专业评分仍占主导，具体权重会随赛程调整。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-05</time>
+        <h4>新人场规则微调，准备时间延长 30 秒</h4>
+        <p>调整主要针对三分钟主题速通场次，目的是降低入门门槛，让更多第一次接触每日大赛主题大赛寸止挑战的选手能完整表达。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-04</time>
+        <h4>进阶案例库新增节奏控制专题</h4>
+        <p>「错位节拍」等作品被收录为示范案例，后续将持续更新，供参赛选手拆解学习。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-03</time>
+        <h4>评论区开放长评功能</h4>
+        <p>观众可以发布更长篇幅的作品分析，优质长评会在页面内展示，社区讨论质量有望进一步提升。</p>
+      </article>
+      <article class="news-card">
+        <time>2026-11-02</time>
+        <h4>年度精选合集播放量突破七万</h4>
+        <p>该合集已成为新观众了解赛事风格的主要入口，官方计划在年末推出第二辑高光回顾。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>每日大赛 · 主题赛寸止挑战</h5>
+        <p>本站为赛事内容聚合与讨论页面，汇总每日大赛主题大赛寸止挑战的规则解读、作品推荐、社区评论与相关资讯，供观众与选手参考。</p>
+      </div>
+      <div>
+        <h5>快速入口</h5>
+        <a href="/#intro">赛事简介</a>
+        <a href="/#hot">热门作品</a>
+        <a href="/#updates">最新动态</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h5>规则与帮助</h5>
+        <a href="/#faq">常见问题</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#category">分类导航</a>
+        <a href="/#news">赛事资讯</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="/#top">主题赛首页</a>
+        <a href="/#comments">社区讨论</a>
+        <a href="/#news">赛程日历</a>
+        <a href="/#top">投稿说明</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 每日大赛主题大赛寸止挑战内容页 · 内容仅供浏览参考</span>
+      <span>免责声明：本页作品信息与评论来自公开社区展示，不构成参赛承诺或结果保证</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                                    </html>
