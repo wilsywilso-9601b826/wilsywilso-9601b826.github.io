@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>吃瓜推特大赛-热门推文大赛盘点与吃瓜指南_推特大赛热点话题_参赛作品解析</title>
+<meta name="description" content="吃瓜推特大赛专题聚合页，盘点近期推特大赛热门作品、参赛选手动态与社区讨论。提供大赛看点解析、热门推文推荐、参赛指南与常见问题，帮你快速掌握吃瓜推特大赛的精华内容与最新进展。">
+<meta name="keywords" content="吃瓜推特大赛,推特大赛,吃瓜大赛,推特热门话题,大赛参赛作品">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231a1a2e'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23f2a900' font-family='sans-serif'%3E🍉%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f8f6f2;
+  --surface: #ffffff;
+  --surface-alt: #f1ede6;
+  --ink: #1e1e2a;
+  --ink-secondary: #4a4a5a;
+  --muted: #7a7a8a;
+  --accent: #e85d3a;
+  --accent-soft: #fde8e2;
+  --accent-gold: #f2a900;
+  --border: #e4dfd7;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.07);
+  --shadow-hover: 0 10px 32px rgba(0,0,0,0.10);
+  --max-w: 1200px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(248,246,242,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 800; font-size: 1.2rem; letter-spacing: -0.02em;
+}
+.brand-icon {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: linear-gradient(135deg, #f2a900, #e85d3a);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.1rem; flex-shrink: 0;
+}
+.nav-links { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.nav-links a {
+  font-size: 0.88rem; color: var(--ink-secondary);
+  padding: 6px 12px; border-radius: 20px; transition: background .2s, color .2s;
+}
+.nav-links a:hover { background: var(--accent-soft); color: var(--accent); }
+.nav-cta {
+  background: var(--ink); color: #fff !important;
+  padding: 7px 18px !important; border-radius: 20px !important;
+  font-weight: 600; font-size: 0.85rem;
+}
+.nav-cta:hover { background: var(--accent) !important; color: #fff !important; }
+
+/* HERO */
+.hero {
+  padding: 60px 0 44px;
+  background: linear-gradient(168deg, #fdf6ef 0%, #f8f6f2 50%, #f0ece4 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -80px; right: -120px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(242,169,0,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero .container { position: relative; z-index: 1; }
+.hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 900; line-height: 1.25; letter-spacing: -0.03em;
+  margin-bottom: 16px; max-width: 780px;
+}
+.hero h1 .highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(242,169,0,0.35) 60%);
+}
+.hero-desc {
+  font-size: 1.08rem; color: var(--ink-secondary);
+  max-width: 640px; margin-bottom: 28px;
+}
+.search-row {
+  display: flex; gap: 10px; max-width: 560px; margin-bottom: 28px; flex-wrap: wrap;
+}
+.search-box {
+  flex: 1; min-width: 220px;
+  display: flex; align-items: center;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 30px; padding: 0 6px 0 20px;
+  box-shadow: var(--shadow-sm);
+}
+.search-box input {
+  flex: 1; border: none; outline: none; background: transparent;
+  font-size: 0.95rem; padding: 12px 0; font-family: var(--font); color: var(--ink);
+}
+.search-box input::placeholder { color: var(--muted); }
+.search-btn {
+  background: var(--accent); color: #fff; border: none;
+  padding: 10px 22px; border-radius: 26px; font-weight: 600;
+  cursor: pointer; font-size: 0.9rem; font-family: var(--font);
+  transition: background .2s;
+}
+.search-btn:hover { background: #d44d2e; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-tags a {
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 7px 16px; border-radius: 24px; font-size: 0.85rem;
+  color: var(--ink-secondary); transition: all .2s; box-shadow: var(--shadow-sm);
+}
+.hero-tags a:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+
+/* SECTION */
+.section { padding: 52px 0; }
+.section-header { margin-bottom: 32px; }
+.section-label {
+  display: inline-block; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
+}
+.section-header h2 {
+  font-size: 1.6rem; font-weight: 800; letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.section-header p { color: var(--ink-secondary); margin-top: 8px; max-width: 680px; font-size: 0.95rem; }
+
+/* INTRO */
+.intro-block {
+  background: var(--surface); border-radius: var(--radius-lg);
+  padding: 36px 40px; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  font-size: 1.02rem; color: var(--ink-secondary);
+}
+.intro-block p { margin-bottom: 14px; }
+.intro-block p:last-child { margin-bottom: 0; }
+.intro-block strong { color: var(--ink); }
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.content-card {
+  background: var(--surface); border-radius: var(--radius-md);
+  padding: 22px 22px 20px; border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm); transition: transform .22s, box-shadow .22s;
+  display: flex; flex-direction: column;
+}
+.content-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.card-badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 12px; margin-bottom: 12px;
+  background: var(--accent-soft); color: var(--accent); width: fit-content;
+}
+.card-badge.gold { background: #fef3d7; color: #b8860b; }
+.card-badge.green { background: #e2f5e9; color: #2e8b57; }
+.card-badge.blue { background: #e3edfb; color: #3567b8; }
+.card-badge.purple { background: #f0e6fa; color: #7b4bc4; }
+.content-card h3 {
+  font-size: 1.02rem; font-weight: 700; margin-bottom: 8px; line-height: 1.45;
+}
+.content-card .card-desc {
+  font-size: 0.86rem; color: var(--ink-secondary); flex: 1; margin-bottom: 14px;
+}
+.card-meta {
+  display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.75rem; color: var(--muted);
+  border-top: 1px solid var(--border); padding-top: 12px;
+}
+.card-meta span { display: flex; align-items: center; gap: 4px; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.card-tags em {
+  font-style: normal; font-size: 0.72rem; background: var(--surface-alt);
+  color: var(--ink-secondary); padding: 2px 8px; border-radius: 10px;
+}
+
+/* UPDATE LIST */
+.update-list { display: flex; flex-direction: column; gap: 0; }
+.update-item {
+  display: flex; align-items: flex-start; gap: 18px;
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+}
+.update-item:last-child { border-bottom: none; }
+.update-time {
+  font-size: 0.78rem; color: var(--muted); white-space: nowrap;
+  min-width: 80px; padding-top: 2px; font-variant-numeric: tabular-nums;
+}
+.update-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+  margin-top: 8px; flex-shrink: 0;
+}
+.update-body h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 3px; }
+.update-body p { font-size: 0.85rem; color: var(--ink-secondary); }
+
+/* CATEGORY */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+.cat-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 18px 14px; text-align: center;
+  transition: all .2s; box-shadow: var(--shadow-sm); cursor: pointer;
+}
+.cat-item:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.cat-item .cat-icon { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+.cat-item .cat-name { font-size: 0.86rem; font-weight: 600; color: var(--ink); }
+.cat-item .cat-count { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+/* ARTICLE */
+.article-box {
+  background: var(--surface); border-radius: var(--radius-lg);
+  padding: 40px 44px; border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.article-box h3 {
+  font-size: 1.25rem; font-weight: 800; margin: 28px 0 14px;
+  letter-spacing: -0.01em;
+}
+.article-box h3:first-child { margin-top: 0; }
+.article-box p { margin-bottom: 16px; color: var(--ink-secondary); font-size: 0.97rem; }
+.article-box strong { color: var(--ink); }
+
+/* TWO COL */
+.two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+@media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+/* GUIDE */
+.guide-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px;
+}
+.guide-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 24px 20px;
+  box-shadow: var(--shadow-sm); transition: all .2s;
+}
+.guide-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.guide-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent-soft); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.9rem; margin-bottom: 12px;
+}
+.guide-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.guide-card p { font-size: 0.84rem; color: var(--ink-secondary); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 14px; }
+.faq-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 22px 26px;
+  box-shadow: var(--shadow-sm);
+}
+.faq-q {
+  font-weight: 700; font-size: 1rem; margin-bottom: 10px;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.faq-q::before {
+  content: 'Q'; flex-shrink: 0; width: 24px; height: 24px;
+  background: var(--accent); color: #fff; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 800;
+}
+.faq-a {
+  font-size: 0.9rem; color: var(--ink-secondary); padding-left: 34px;
+}
+
+/* COMMENTS */
+.comment-list { display: flex; flex-direction: column; gap: 16px; }
+.comment-item {
+  background: var(--surface); border-radius: var(--radius-md);
+  padding: 18px 22px; border: 1px solid var(--border);
+}
+.comment-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.comment-avatar {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.comment-name { font-weight: 600; font-size: 0.88rem; }
+.comment-date { font-size: 0.75rem; color: var(--muted); margin-left: auto; }
+.comment-text { font-size: 0.9rem; color: var(--ink-secondary); }
+
+/* NEWS */
+.news-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+}
+.news-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);
+  transition: all .2s;
+}
+.news-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.news-date { font-size: 0.75rem; color: var(--muted); margin-bottom: 8px; }
+.news-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+.news-card p { font-size: 0.85rem; color: var(--ink-secondary); }
+
+/* FOOTER */
+.footer {
+  background: var(--ink); color: rgba(255,255,255,0.7);
+  padding: 48px 0 32px; margin-top: 20px;
+}
+.footer-inner {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px;
+  max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+}
+.footer h5 { color: #fff; font-size: 0.9rem; margin-bottom: 14px; font-weight: 700; }
+.footer p, .footer li { font-size: 0.82rem; line-height: 1.9; }
+.footer a:hover { color: var(--accent-gold); }
+.footer-bottom {
+  max-width: var(--max-w); margin: 36px auto 0; padding: 24px 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.78rem;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .article-box { padding: 24px 20px; }
+  .intro-block { padding: 24px 20px; }
+  .hero { padding: 40px 0 32px; }
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <a href="/#hero" class="brand">
+      <span class="brand-icon">🍉</span>
+      <span>吃瓜推特大赛</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#hero" class="nav-cta">立即围观</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="container">
+    <h1>吃瓜推特大赛 <span class="highlight">热门推文与参赛作品全景扫描</span></h1>
+    <p class="hero-desc">
+      聚焦推特大赛最新赛况与出圈作品，盘点高能推文、参赛选手与社区名场面。无论你是刚入坑的围观群众还是持续追踪的老吃瓜人，这里都能找到值得一看的参赛内容与讨论焦点。
+    </p>
+    <p class="hero-desc" style="margin-top:-12px; font-size:0.95rem; color:var(--muted);">
+      从参赛作品风格到社区口碑，从赛制看点 to 吃瓜指南，一页看懂吃瓜推特大赛的精华脉络。
+    </p>
+    <div class="search-row">
+      <div class="search-box">
+        <input type="text" placeholder="搜索参赛作品、选手、话题……" aria-label="搜索吃瓜推特大赛相关内容">
+      </div>
+      <button class="search-btn">搜一下</button>
+    </div>
+    <div class="hero-tags">
+      <a href="/#hot">🔥 热门参赛作品</a>
+      <a href="/#updates">🆕 最新赛况</a>
+      <a href="/#categories">📂 分类浏览</a>
+      <a href="/#deep-dive">🔍 深度解析</a>
+      <a href="/#faq">❓ 新手问答</a>
+      <a href="/#comments">💬 吃瓜讨论</a>
+      <a href="/#news">📰 大赛资讯</a>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="section" id="intro">
+  <div class="container">
+    <div class="intro-block">
+      <p><strong>吃瓜推特大赛是什么？</strong>简单来说，这是一项围绕推特平台展开的内容创作与话题互动赛事，参赛者通过发布推文、组图、短视频或话题串联等方式参与比拼，围观群众则在场外品评、转发、投票，形成了一个兼具创作性与娱乐性的社区事件。本页专门为追踪<strong>吃瓜推特大赛</strong>的读者整理参赛作品亮点、选手动态、赛程看点与社区讨论风向，帮助你在信息洪流中快速抓准值得关注的焦点。</p>
+      <p>如果你正在搜索吃瓜推特大赛的相关内容，通常关心的是这几件事：最近有哪些出圈作品？哪位选手的表现最亮眼？赛制怎么理解？从哪里开始看比较不费力？本页围绕这些实际需求，设置了热门推荐、最新动态、分类入口、深度解析、常见问答和用户评论等模块，从入门到进阶都有对应的信息入口。页面内容会随赛程推进持续更新，适合收藏后反复回看。</p>
+      <p>页面适合对推特热门话题感兴趣的内容消费者、想了解赛事全貌的新观众，以及需要快速筛选信息的轻度用户。无论你偏好轻松吃瓜还是认真分析选手表现，都可以从下面的推荐卡片和解析段落中找到切入点。</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOT CONTENT -->
+<section class="section" id="hot">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">热门推荐</span>
+      <h2>吃瓜推特大赛 · 高能参赛作品精选</h2>
+      <p>从话题度、讨论量、出圈速度三个维度挑出的代表性内容，帮你快速锁定值得围观的作品。</p>
+    </div>
+    <div class="card-grid">
+      <article class="content-card">
+        <span class="card-badge gold">🔥 本周最热</span>
+        <h3>「东京漂流者」都市观察推文系列</h3>
+        <div class="card-tags"><em>纪实视角</em><em>图文连载</em><em>高转发</em></div>
+        <p class="card-desc">用九宫格记录都市边缘人群日常，配文克制却有力量，评论区自发形成追更氛围，是本届大赛讨论度最高的非虚构类参赛作品之一。</p>
+        <div class="card-meta"><span>📊 热度 98</span><span>💬 讨论 2.3k</span><span>⭐ 评分 9.4</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge">🎭 剧情演绎</span>
+        <h3>「假如客服是AI」多角色对话推文</h3>
+        <div class="card-tags"><em>幽默</em><em>对话体</em><em>反转</em></div>
+        <p class="card-desc">用十连推文模拟AI客服与用户的荒诞对话，结尾反转引发大量二次创作，单条最高转发破万，是本届大赛喜剧赛道的标杆作品。</p>
+        <div class="card-meta"><span>📊 热度 95</span><span>💬 讨论 1.8k</span><span>⭐ 评分 9.2</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge green">🌿 清新治愈</span>
+        <h3>「凌晨四点的面包房」生活流记录</h3>
+        <div class="card-tags"><em>生活记录</em><em>温暖</em><em>慢节奏</em></div>
+        <p class="card-desc">连续七天记录面包师开工前的准备过程，文字平实画面干净，在快节奏的赛事中提供了一种安静的观看体验，被不少读者收藏为睡前读物。</p>
+        <div class="card-meta"><span>📊 热度 89</span><span>💬 讨论 1.1k</span><span>⭐ 评分 9.0</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge purple">🎨 视觉实验</span>
+        <h3>「像素城市」AI辅助创作系列</h3>
+        <div class="card-tags"><em>视觉实验</em><em>像素风</em><em>技术流</em></div>
+        <p class="card-desc">将城市地标转化为像素艺术，配合短推文讲述创作思路，技术展示与叙事比例拿捏得当，引发了关于AI创作边界的社区讨论。</p>
+        <div class="card-meta"><span>📊 热度 92</span><span>💬 讨论 1.5k</span><span>⭐ 评分 8.9</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge blue">📚 知识科普</span>
+        <h3>「一分钟冷知识」系列推文</h3>
+        <div class="card-tags"><em>科普</em><em>短平快</em><em>易传播</em></div>
+        <p class="card-desc">每条推文只讲一个冷知识，配图简洁信息密度高，被大量教育类账号转发引用，是本届大赛中知识类内容传播效率最高的作品。</p>
+        <div class="card-meta"><span>📊 热度 87</span><span>💬 讨论 980</span><span>⭐ 评分 8.8</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge gold">🏆 口碑黑马</span>
+        <h3>「旧物修理店」手艺人访谈录</h3>
+        <div class="card-tags"><em>访谈</em><em>手工艺</em><em>人文</em></div>
+        <p class="card-desc">走访三位老手艺人，用问答体推文呈现他们的工作哲学。没有花哨排版，靠内容本身打动读者，后期口碑持续走高，被视为本届大赛的隐藏宝藏。</p>
+        <div class="card-meta"><span>📊 热度 85</span><span>💬 讨论 760</span><span>⭐ 评分 9.3</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge">🎵 音乐跨界</span>
+        <h3>「地铁声音地图」音频推文企划</h3>
+        <div class="card-tags"><em>声音采集</em><em>城市</em><em>沉浸感</em></div>
+        <p class="card-desc">收集不同城市地铁站的报站声与环境音，剪辑成一段三分钟音频推文，用听觉带人穿越城市，在视觉内容扎堆的赛事中辨识度极高。</p>
+        <div class="card-meta"><span>📊 热度 83</span><span>💬 讨论 640</span><span>⭐ 评分 8.7</span></div>
+      </article>
+      <article class="content-card">
+        <span class="card-badge green">🌍 国际视角</span>
+        <h3>「世界早餐桌」跨文化对比推文</h3>
+        <div class="card-tags"><em>跨文化</em><em>美食</em><em>对比叙事</em></div>
+        <p class="card-desc">连续推送十二个国家的家庭早餐实拍与背景说明，以小见大呈现文化差异，评论区变成了各地读者的早餐分享现场，互动率极高。</p>
+        <div class="card-meta"><span>📊 热度 81</span><span>💬 讨论 1.2k</span><span>⭐ 评分 8.6</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- UPDATES -->
+<section class="section" id="updates">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">最新动态</span>
+      <h2>吃瓜推特大赛 · 赛况更新与热门动态</h2>
+      <p>按时间倒序整理的参赛动态、话题走向与社区热点，方便你快速掌握当前赛程进展。</p>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <span class="update-time">11月7日 09:20</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>「东京漂流者」发布最终章，评论区涌入大量告别留言</h4>
+          <p>该系列以一篇长推文收尾，回顾了七天拍摄过程，作者表示会把全部内容整理成合辑。目前该话题仍在推特趋势榜前列。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月6日 22:40</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>喜剧赛道新增三组参赛作品，对话体推文竞争升温</h4>
+          <p>三组新作品均采用多角色对话形式，其中一组以「社畜与AI」为主题，发布两小时内转发破千，被视为该赛道的有力竞争者。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月6日 18:15</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>社区发起「最想安利的冷门参赛作品」投票</h4>
+          <p>由用户自发组织的投票活动已收集到超过五百条提名，目前「旧物修理店」暂时领先，投票将持续至本周日。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月6日 11:30</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>「像素城市」作者分享创作流程，引发AI辅助讨论</h4>
+          <p>作者在推文中详细说明了从草图到成品的步骤，并回应了外界关于AI参与度的疑问，相关讨论帖已超过三百条。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月5日 20:50</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>「地铁声音地图」被多个城市类账号转发推荐</h4>
+          <p>该音频企划因独特的听觉体验获得跨圈层关注，作者透露正在制作第二期，将加入更多亚洲城市的声音素材。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月5日 15:00</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>大赛组委会公布中期入围名单，共三十组作品入选</h4>
+          <p>入围作品涵盖纪实、喜剧、视觉实验、知识科普等方向，完整名单已在官方账号发布，终评将于月底进行。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月4日 21:10</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>「世界早餐桌」推出特别篇，聚焦移民家庭的早餐变化</h4>
+          <p>特别篇以三个移民家庭为样本，讲述饮食习惯在代际之间的传承与改变，内容深度较前期明显提升。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月4日 12:45</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>多位往届参赛者发文点评本届作品，形成「场外评论」现象</h4>
+          <p>往届选手的点评推文本身也获得了不少关注，部分点评角度专业，被读者视为理解参赛作品的辅助阅读材料。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月3日 19:30</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>「一分钟冷知识」系列累计转发突破五万</h4>
+          <p>该系列以稳定更新和清晰的信息结构赢得口碑，作者表示会继续保持每日一更的节奏直到赛程结束。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月3日 10:00</span>
+        <span class="update-dot"></span>
+        <div class="update-body">
+          <h4>大赛官方发布观众参与指南，梳理投票与互动规则</h4>
+          <p>指南明确了观众投票在终评中的权重，并说明了举报违规作品的处理流程，为围观众提供了清晰的行为参考。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">分类入口</span>
+      <h2>按内容方向浏览吃瓜推特大赛</h2>
+      <p>不同赛道风格差异明显，先选方向再看作品，能大幅提升浏览效率。</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-item"><span class="cat-icon">📝</span><div class="cat-name">纪实记录</div><div class="cat-count">42 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">😂</span><div class="cat-name">喜剧幽默</div><div class="cat-count">37 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">🎨</span><div class="cat-name">视觉实验</div><div class="cat-count">28 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">📚</span><div class="cat-name">知识科普</div><div class="cat-count">25 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">🎧</span><div class="cat-name">声音企划</div><div class="cat-count">19 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">🌍</span><div class="cat-name">跨文化观察</div><div class="cat-count">16 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">💬</span><div class="cat-name">对话体叙事</div><div class="cat-count">22 组作品</div></div>
+      <div class="cat-item"><span class="cat-icon">🔧</span><div class="cat-name">技术流创作</div><div class="cat-count">14 组作品</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEEP DIVE -->
+<section class="section" id="deep-dive">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">深度解析</span>
+      <h2>吃瓜推特大赛的看点、赛制与围观姿势</h2>
+      <p>想看懂比赛而不只是看热闹，这一节从内容类型、选手表现、赛制逻辑三个角度展开。</p>
+    </div>
+    <div class="article-box">
+      <h3>一、推文赛道的类型分化与内容特征</h3>
+      <p>吃瓜推特大赛虽然以“推特”为平台载体，但参赛作品并不局限于短文本。从目前入围的三十组作品来看，内容大致可分为纪实记录、喜剧叙事、视觉实验、知识科普和声音企划五个方向。纪实类作品强调真实感与细节密度，通常依赖连续更新建立读者黏性；喜剧类作品则更看重节奏与反转，单条推文的爆发力往往决定传播上限。视觉实验类作品介于技术展示与艺术表达之间，是本届大赛讨论度增长最快的赛道。理解这些类型差异，是判断作品表现力的第一步。</p>
+      <p>值得注意的是，<strong>吃瓜推特大赛</strong>中的“吃瓜”并不等同于纯娱乐围观。很多高口碑作品恰恰依靠扎实的内容结构获得认可，比如「旧物修理店」的访谈录和「世界早餐桌」的跨文化对比，都属于慢热型内容。它们的共同点是信息密度高、观点清晰，读者在转发之外会留下较长的评论，形成二次讨论。这类作品的传播曲线通常比喜剧类平缓，但长尾效应更明显。</p>
+      <h3>二、选手表现：稳定更新比单条爆款更重要</h3>
+      <p>从赛程中段的表现来看，持续稳定更新的选手在综合评分上更有优势。以「一分钟冷知识」为例，单条推文的数据并不算特别炸裂，但每日一更的节奏积累了大量习惯性读者，转发量在第三周出现明显跃升。相比之下，部分依赖单条爆款的作品在热度回落后缺乏后续内容承接，讨论度下降较快。这说明吃瓜推特大赛的评审逻辑并不只看峰值数据，内容续航能力同样是重要考量。</p>
+      <p>另一类值得关注的选手是“技术流”创作者。他们往往在视觉或声音处理上有明显优势，但需要解决叙事完整性的问题。「像素城市」的应对方式是给每组图像配上创作手记，把技术展示转化为可阅读的过程记录，这一调整明显提升了读者的停留意愿。类似的做法在本届大赛中逐渐增多，反映出参赛者对“技术为内容服务”这一判断的共识。</p>
+      <h3>三、赛制看点与观众参与方式</h3>
+      <p>本届大赛采用“中期入围+终评”的两段式结构，中期由组委会筛选三十组作品进入终评，终评阶段观众投票占据一定权重。这意味着围观群众不只是看客，投票和互动行为会实际影响结果。官方发布的观众参与指南中明确说明，投票需基于对作品内容的了解，恶意刷票会被取消资格。对于想认真参与的读者，建议先浏览分类入口锁定方向，再集中阅读入围作品，避免被碎片信息带偏节奏。</p>
+      <p>此外，<strong>吃瓜推特大赛</strong>的社区讨论本身也是赛程的一部分。用户自发组织的“最想安利的冷门作品”投票、往届选手的场外点评，都构成了官方赛程之外的补充叙事。这些讨论帖往往比作品本身更直接地反映了社区偏好，对于判断最终奖项归属有不错的参考价值。如果你时间有限，先看评论区的争议点再回头读作品，也是一种高效的吃瓜策略。</p>
+      <h3>四、适合人群与浏览建议</h3>
+      <p>这个赛事的内容跨度较大，适合的观看方式也因人而异。偏好轻松娱乐的读者可以从喜剧赛道入手，单条阅读成本低、反馈直接；关注社会观察的读者建议从纪实类作品看起，连续更新带来的沉浸感更强；对技术和视觉表达感兴趣的读者，视觉实验和声音企划两个方向更对胃口。无论从哪个入口进入，都建议配合最新动态模块一起看，避免错过赛程中的关键变化。</p>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="section" id="guide">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">体验指南</span>
+      <h2>如何更舒服地浏览这个吃瓜推特大赛专题页</h2>
+      <p>页面为连续浏览设计，以下几条使用建议能帮你减少翻找时间。</p>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-num">1</div>
+        <h4>先看分类再挑作品</h4>
+        <p>不同赛道风格差异大，先通过分类入口确定感兴趣的方向，比逐条翻推荐卡片效率更高。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-num">2</div>
+        <h4>最新动态适合追更</h4>
+        <p>赛程期间变化频繁，最新动态模块按时间倒序排列，适合每天花两分钟快速扫一遍。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-num">3</div>
+        <h4>深度解析用于补课</h4>
+        <p>如果对赛制或作品类型不熟悉，先读深度解析再回看推荐卡片，理解门槛会低很多。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-num">4</div>
+        <h4>评论区常有宝藏</h4>
+        <p>用户评论里经常出现对冷门作品的推荐和补充信息，适合作为筛选作品的辅助线索。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-num">5</div>
+        <h4>移动端阅读友好</h4>
+        <p>页面针对手机浏览做了适配，卡片和列表在窄屏下会自动调整，通勤路上也能顺畅看完。</p>
+      </div>
+      <div class="guide-card">
+        <div class="guide-num">6</div>
+        <h4>收藏后回看更方便</h4>
+        <p>赛程结束后页面仍会保留内容索引，收藏本页可以随时回来补看错过的作品和讨论。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">常见问题</span>
+      <h2>关于吃瓜推特大赛的常见疑问</h2>
+      <p>整理自搜索高频问题和社区提问，覆盖入门、赛制与观看建议。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">吃瓜推特大赛到底是什么性质的比赛？</div>
+        <div class="faq-a">这是一项以推特平台为载体的内容创作赛事，参赛者通过推文系列、图文组合、短视频或声音作品参与评选，观众可以投票和讨论。它既有创作比赛的专业性，也带有社区围观的娱乐属性，所以被很多参与者称为“吃瓜推特大赛”。赛制通常包含中期入围和终评两个阶段，具体规则以官方发布为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">第一次关注这个大赛，应该从哪些作品开始看？</div>
+        <div class="faq-a">建议先看纪实记录和喜剧幽默两个方向，前者容易建立对内容深度的认知，后者阅读门槛低、反馈直接。如果时间有限，可以先从热门推荐里的「东京漂流者」和「假如客服是AI」入手，这两组作品分别代表了本届大赛在纪实和喜剧两个赛道上的高水准，看完基本能对赛事风格形成判断。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">观众投票会影响最终结果吗？</div>
+        <div class="faq-a">会。本届大赛的终评阶段设有观众投票环节，官方指南中明确了投票在最终评分中的权重。不过投票需要基于对作品的实际了解，恶意刷票会被取消资格。对于认真想参与的读者，建议先集中阅读入围作品再做选择，而不是只看转发数据跟风投票，这样投出的票也更有参考价值。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">为什么有些作品热度不高但口碑很好？</div>
+        <div class="faq-a">这跟赛道特性有关。纪实、访谈和跨文化类内容通常需要连续阅读才能感受到价值，单条推文的数据不会特别突出，但读者黏性和评论质量往往更高。像「旧物修理店」和「世界早餐桌」都属于这类慢热作品。吃瓜推特大赛的评审并不只看峰值热度，内容完成度和叙事质量同样是重要维度，所以口碑和热度出现错位是正常现象。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">页面里的最新动态多久更新一次？</div>
+        <div class="faq-a">最新动态模块会跟随赛程节奏调整更新频率，赛程密集期通常每天整理一次，涵盖作品更新、选手动态和社区热点。如果你想追踪某组特定作品，建议结合分类入口和用户评论一起看，评论区经常会有读者自发补充作品的最新进展，信息更新有时比官方动态还快。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">除了看作品，还有什么参与方式？</div>
+        <div class="faq-a">参与方式主要有三种：在评论区留下你的观感或推荐、参与用户自发组织的投票和讨论话题、把值得安利的作品转发给同好。本届大赛的社区氛围比较开放，往届选手的场外点评也被很多人当作辅助阅读材料。如果你对某类内容特别熟悉，写一段分析发在评论区，往往能引发不错的讨论，这也是吃瓜推特大赛有意思的地方。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENTS -->
+<section class="section" id="comments">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">用户评论</span>
+      <h2>吃瓜群众都在聊什么</h2>
+      <p>节选自近一个月的社区讨论，观点不代表本站立场。</p>
+    </div>
+    <div class="comment-list">
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#e85d3a;">瓜</span><span class="comment-name">西柚气泡水</span><span class="comment-date">11月6日</span></div>
+        <div class="comment-text">「东京漂流者」最后一篇真的看哭了，作者没有煽情，就是安安静静把七天的记录收尾，反而比很多用力过猛的作品打动人。希望大赛结束后能出完整合辑。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#3567b8;">推</span><span class="comment-name">半夜不睡觉</span><span class="comment-date">11月6日</span></div>
+        <div class="comment-text">喜剧赛道今年太卷了，对话体一抓一大把，但真正好笑的不多。「假如客服是AI」那个反转确实妙，其他几组有点为了反转而反转，看多了会腻。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#2e8b57;">吃</span><span class="comment-name">绿豆汤不加糖</span><span class="comment-date">11月5日</span></div>
+        <div class="comment-text">冷门安利一个「地铁声音地图」，戴耳机听真的有种在城市里穿梭的感觉。这种内容在推特上其实是吃亏的，因为大家刷推的时候很少开声音，但质量真的高。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#7b4bc4;">瓜</span><span class="comment-name">阿宅今天出门了</span><span class="comment-date">11月5日</span></div>
+        <div class="comment-text">说实话对AI辅助创作那组有点纠结，视觉上确实好看，但总觉得少点手工的温度。不过作者后来发的创作手记挺加分的，至少态度是坦诚的。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#b8860b;">友</span><span class="comment-name">橘子汽水冒泡</span><span class="comment-date">11月4日</span></div>
+        <div class="comment-text">我是被朋友拉来吃瓜的，本来只想随便看看，结果把「世界早餐桌」从头翻到尾。评论区各地读者晒早餐比正文还精彩，这种互动感是其他平台很难复制的。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#d44d2e;">吃</span><span class="comment-name">菠萝油不加冰</span><span class="comment-date">11月4日</span></div>
+        <div class="comment-text">中期入围名单出来之后有点意外，有几组我觉得数据很好的没进。不过看完深度解析里说的“内容续航能力”大概理解了，单条爆款确实撑不住整个赛程。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#3567b8;">瓜</span><span class="comment-name">午夜场电影</span><span class="comment-date">11月3日</span></div>
+        <div class="comment-text">「旧物修理店」值得一个更好的名次，访谈做得很扎实，三位手艺人的表达也各有特点。这种内容不该被埋没，大家投票的时候可以多考虑一下慢热型作品。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#2e8b57;">推</span><span class="comment-name">薄荷糖不凉</span><span class="comment-date">11月3日</span></div>
+        <div class="comment-text">冷知识系列每天一更真的很拼，而且质量没掉过。虽然单条看着简单，但选题和配图明显花了心思，属于那种你随手一转但作者背后做了很多功课的类型。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#7b4bc4;">吃</span><span class="comment-name">芝士年糕锅</span><span class="comment-date">11月2日</span></div>
+        <div class="comment-text">往届选手的场外点评比正文好看系列。有个老选手写喜剧赛道分析写得特别到位，直接点出了今年对话体泛滥的问题，感觉组委会可以请他去当评委。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#e85d3a;">瓜</span><span class="comment-name">一只路过的猫</span><span class="comment-date">11月2日</span></div>
+        <div class="comment-text">页面整理得挺清楚的，分类和最新动态放在一起看效率高很多。就是希望热门推荐能再多几个冷门入口，有些好作品藏在分类里容易被忽略。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#b8860b;">友</span><span class="comment-name">苏打水没气了</span><span class="comment-date">11月1日</span></div>
+        <div class="comment-text">像素城市那组我一开始以为是纯炫技，看了创作手记才改观。作者把每张图的思路都写清楚了，这种愿意分享过程的创作者值得支持。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#d44d2e;">推</span><span class="comment-name">今晚不加班</span><span class="comment-date">10月31日</span></div>
+        <div class="comment-text">中立地说，这届整体质量比上一届高，但同质化也更明显。喜剧赛道一窝蜂做对话体，视觉赛道一窝蜂上AI，真正有辨识度的作品其实没那么多。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#3567b8;">吃</span><span class="comment-name">秋刀鱼罐头</span><span class="comment-date">10月30日</span></div>
+        <div class="comment-text">第一次完整追一届，感觉像在看内容版的选秀。评论区自发投票那个活动挺有意思的，比官方活动更有参与感，希望能一直办下去。</div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-avatar" style="background:#2e8b57;">瓜</span><span class="comment-name">云朵收集员</span><span class="comment-date">10月29日</span></div>
+        <div class="comment-text">「凌晨四点的面包房」是这届最让我意外的作品，看标题以为是普通生活流，读进去才发现细节抓得特别好。安静的内容在热闹的比赛里反而显眼。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">相关资讯</span>
+      <h2>吃瓜推特大赛 · 资讯与观察</h2>
+      <p>围绕赛事进程、内容趋势和社区话题的短资讯汇总。</p>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">11月6日</div>
+        <h4>中期入围名单公布，五个赛道共三十组作品晋级</h4>
+        <p>组委会同步发布了终评阶段的评审维度说明，内容完成度、叙事质量和社区反馈被列为三大核心指标，观众投票权重占比约两成。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">11月5日</div>
+        <h4>对话体推文扎堆出现，喜剧赛道同质化引讨论</h4>
+        <p>社区中有读者指出，本届喜剧类作品过度依赖对话体结构，反转套路相似度高。部分往届选手建议创作者在形式之外多打磨人物逻辑。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">11月4日</div>
+        <h4>声音类参赛作品关注度上升，「地铁声音地图」成代表作</h4>
+        <p>声音企划这一冷门方向在本届大赛中获得更多讨论，作者透露第二期正在制作中，将加入更多城市的通勤场景采集。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">11月3日</div>
+        <h4>官方发布观众参与指南，明确投票与举报规则</h4>
+        <p>指南对观众投票的权重、违规行为的处理流程做了详细说明，并鼓励读者在了解作品内容的基础上参与互动，避免盲目跟风。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">11月2日</div>
+        <h4>往届选手场外点评成现象，专业分析帖受追捧</h4>
+        <p>多位往届参赛者在个人账号发布作品点评，其中对赛道趋势和创作方法的分析尤其受欢迎，部分帖子的转发量超过参赛作品本身。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">10月31日</div>
+        <h4>社区自发投票「最想安利的冷门作品」进入尾声</h4>
+        <p>由用户组织的冷门作品推荐活动已收集超过五百条提名，「旧物修理店」「凌晨四点的面包房」等慢热型作品暂时领先。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h5>🍉 吃瓜推特大赛</h5>
+      <p>专注推特大赛热门作品、选手动态与社区讨论的内容专题页。为围观群众提供高效的信息整理与浏览入口，帮助读者在赛程中快速定位值得关注的内容。</p>
+    </div>
+    <div>
+      <h5>内容导航</h5>
+      <ul>
+        <li><a href="/#hot">热门推荐</a></li>
+        <li><a href="/#updates">最新动态</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deep-dive">深度解析</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>互动参与</h5>
+      <ul>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>友情链接</h5>
+      <ul>
+        <li><a href="/#hero">内容首页</a></li>
+        <li><a href="/#hot">作品索引</a></li>
+        <li><a href="/#news">赛事资讯</a></li>
+        <li><a href="/#comments">社区讨论</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 吃瓜推特大赛专题页 · 内容整理与社区观察</span>
+    <span>页面内容为信息聚合展示，观点来自公开讨论，不代表本站立场。赛事信息请以官方发布为准。</span>
+  </div>
+</footer>
+
+</body>
+  </html>
